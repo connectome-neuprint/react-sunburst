@@ -1,0 +1,14 @@
+{
+  "name": "@neuprint/react-sunburst",
+  "version": "0.0.1",
+  "description": "React component to render SVG sunburst graphic",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jody Clements",
+  "license": "MIT",
+  "dependencies": {
+    "@neuprint/sunburst": "^1.0.0"
+  }
+}
