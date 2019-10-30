@@ -21,6 +21,11 @@ class Sunburst extends React.Component {
   componentDidUpdate() {
     const { sunburstObj } = this.state;
     const { data } = this.props;
+    // clear out the existing graphics
+    const node = this.sunburstRef.current;
+    while (node.firstChild) {
+      node.removeChild(node.firstChild);
+    }
     sunburstObj.setData(data).render(this.sunburstRef.current);
   }
 
