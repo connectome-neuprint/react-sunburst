@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import isEqual from 'react-fast-compare';
 import SunburstObject from "@neuprint/sunburst";
 
 class Sunburst extends React.Component {
@@ -18,9 +19,13 @@ class Sunburst extends React.Component {
     this.setState({ sunburstObj: sunburst });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     const { sunburstObj } = this.state;
     const { data } = this.props;
+    // if data is the same as before, then no reason to update the component
+    if (isEqual(data, prevProps.data)) {
+      return;
+    }
     // clear out the existing graphics
     const node = this.sunburstRef.current;
     while (node.firstChild) {

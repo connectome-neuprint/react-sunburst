@@ -13,7 +13,8 @@
   "author": "Jody Clements",
   "license": "MIT",
   "dependencies": {
-    "@neuprint/sunburst": "^1.0.0"
+    "@neuprint/sunburst": "^1.0.0",
+    "react-fast-compare": "^2.0.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
@@ -28,10 +29,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "prettier": "^1.18.2",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "prettier": "^1.18.2"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
