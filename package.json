@@ -13,7 +13,7 @@
   "author": "Jody Clements",
   "license": "MIT",
   "dependencies": {
-    "@neuprint/sunburst": "^1.0.0",
+    "@neuprint/sunburst": "^1.0.1",
     "react-fast-compare": "^2.0.4"
   },
   "devDependencies": {

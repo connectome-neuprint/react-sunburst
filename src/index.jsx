@@ -35,7 +35,7 @@ class Sunburst extends React.Component {
   }
 
   render() {
-    return <div className="sunburst" ref={this.sunburstRef} />;
+    return <div style={{display:'block', width: '100%', height: '100%'}} className="sunburst" ref={this.sunburstRef} />;
   }
 }
 
