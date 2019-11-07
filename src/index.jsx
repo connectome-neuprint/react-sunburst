@@ -45,7 +45,7 @@ Sunburst.defaultProps = {
 
 Sunburst.propTypes = {
   data: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    name: PropTypes.oneOfType([PropTypes.string, PropTypes.number ]).isRequired,
     children: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
   }).isRequired,
   colors: PropTypes.arrayOf(PropTypes.string)
