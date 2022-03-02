@@ -6,8 +6,8 @@
   "module": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d lib",
-    "dev": "babel src -d lib --watch  --source-maps inline",
+    "build": "babel src -d lib --ignore **/*.stories.jsx",
+    "dev": "babel src -d lib --watch --source-maps inline --ignore **/*.stories.jsx",
     "prepublishOnly": "npm run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
