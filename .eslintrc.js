@@ -1,25 +1,20 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true,
+    es6: true
   },
-  extends: [
-    'airbnb', 'prettier'
-  ],
+  extends: ["airbnb", "prettier", "plugin:storybook/recommended"],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: 'module'
   },
-  plugins: [
-    'react',
-  ],
-  rules: {
-  },
+  plugins: ['react'],
+  rules: {}
 };
