@@ -396,12 +396,14 @@ export const Primary = Template.bind({});
 Primary.args = {
   data,
   colors: ['#396a9f', '#e2b72f'],
-  preserveTopLevelOrder: true
+  preserveTopLevelOrder: true,
+  onNodeClick: (node) => console.log('node', node)
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   data,
   colors: ['#00ff00','#ff0000','#396a9f'],
-  preserveTopLevelOrder: false
+  preserveTopLevelOrder: false,
+  onNodeClick: (node) => console.log('node', node)
 };

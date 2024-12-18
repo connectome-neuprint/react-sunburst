@@ -11,10 +11,11 @@ class Sunburst extends React.Component {
   }
 
   componentDidMount() {
-    const { data, colors, preserveTopLevelOrder } = this.props;
+    const { data, colors, preserveTopLevelOrder, onNodeClick } = this.props;
     const sunburst = new SunburstObject({
       preserveTopLevelOrder,
-      colors
+      colors,
+      callback: onNodeClick
     });
     sunburst.setData(data).render(this.sunburstRef.current);
     this.setState({ sunburstObj: sunburst });
@@ -42,7 +43,8 @@ class Sunburst extends React.Component {
 
 Sunburst.defaultProps = {
   colors: null,
-  preserveTopLevelOrder: false
+  preserveTopLevelOrder: false,
+  onNodeClick: null
 };
 
 Sunburst.propTypes = {
@@ -51,7 +53,8 @@ Sunburst.propTypes = {
     children: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
   }).isRequired,
   colors: PropTypes.arrayOf(PropTypes.string),
-  preserveTopLevelOrder: PropTypes.bool
+  preserveTopLevelOrder: PropTypes.bool,
+  onNodeClick: PropTypes.func
 };
 
 export default Sunburst;
